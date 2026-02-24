@@ -1,0 +1,120 @@
+{
+  "project_name": "Tribal Xperience",
+  "design_philosophy": {
+    "theme": "Nocturnal Adrenaline",
+    "core_concept": "The Arena of Dust and Glory",
+    "emotional_drivers": ["Fearless", "Raw", "Premium", "Kinetic"],
+    "visual_style": "Dark Cinematic, High Contrast, Rugged Textures"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Anton, sans-serif",
+      "weights": ["400"],
+      "usage": "All section titles, hero text, and major stats. MUST be Uppercase.",
+      "letter_spacing": "tracking-wide"
+    },
+    "body": {
+      "font_family": "Exo 2, sans-serif",
+      "weights": ["300", "400", "600"],
+      "usage": "Descriptions, buttons, and navigation.",
+      "letter_spacing": "tracking-normal"
+    },
+    "accents": {
+      "font_family": "Oswald, sans-serif",
+      "usage": "Subheadings, labels, and metadata tags."
+    },
+    "installation": "Import from Google Fonts: @import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');"
+  },
+  "colors": {
+    "primary": {
+      "background": "#111111",
+      "surface": "#1A1A1A",
+      "surface_highlight": "#252525"
+    },
+    "accents": {
+      "red": "#D12828",
+      "gold": "#F2C94C",
+      "red_glow": "rgba(209, 40, 40, 0.5)",
+      "gold_glow": "rgba(242, 201, 76, 0.3)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B"
+    },
+    "utility": {
+      "border": "rgba(255, 255, 255, 0.1)",
+      "glass": "rgba(255, 255, 255, 0.03)"
+    }
+  },
+  "layout_strategies": {
+    "spacing": "Generous. Use p-20 or p-32 for section gaps. Mobile: p-8.",
+    "grid_system": "The 'Tetris' Grid. Avoid perfect symmetry. Use col-span-2 vs col-span-1 to create rhythm.",
+    "container": "max-w-7xl mx-auto px-6",
+    "z_index": {
+      "base": "0",
+      "overlay": "10",
+      "sticky": "50",
+      "modal": "100"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#D12828] text-white hover:bg-red-700 uppercase font-bold tracking-widest skew-x-[-10deg] px-8 py-4 transition-all duration-300 hover:shadow-[0_0_20px_rgba(209,40,40,0.6)]",
+      "secondary": "border border-white/20 text-white hover:border-[#F2C94C] hover:text-[#F2C94C] uppercase tracking-widest px-8 py-4 bg-transparent transition-all duration-300",
+      "ghost": "text-gray-400 hover:text-white uppercase tracking-wider text-sm"
+    },
+    "cards": {
+      "experience": "group relative overflow-hidden bg-white/5 border border-white/10 hover:border-[#D12828]/50 transition-all duration-500 backdrop-blur-sm",
+      "stat": "flex flex-col items-center justify-center p-8 bg-gradient-to-br from-white/5 to-transparent border-t border-white/10"
+    },
+    "inputs": {
+      "default": "bg-white/5 border-white/10 focus:border-[#D12828] text-white placeholder-gray-500 rounded-none h-12"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "settings": {
+      "transition": { "duration": 0.6, "ease": [0.22, 1, 0.36, 1] },
+      "viewport": { "once": true, "margin": "-100px" }
+    },
+    "variants": {
+      "fadeUp": {
+        "hidden": { "opacity": 0, "y": 40 },
+        "visible": { "opacity": 1, "y": 0 }
+      },
+      "staggerContainer": {
+        "hidden": { "opacity": 0 },
+        "visible": { "opacity": 1, "transition": { "staggerChildren": 0.1 } }
+      },
+      "scaleIn": {
+        "hidden": { "opacity": 0, "scale": 0.9 },
+        "visible": { "opacity": 1, "scale": 1 }
+      }
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.pexels.com/photos/14507724/pexels-photo-14507724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "experience_rally": "https://images.pexels.com/photos/14909157/pexels-photo-14909157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "experience_motocross": "https://images.pexels.com/photos/34190078/pexels-photo-34190078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "experience_offroad": "https://images.pexels.com/photos/18086894/pexels-photo-18086894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "gallery_helmet": "https://images.pexels.com/photos/13460682/pexels-photo-13460682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "gallery_drift": "https://images.pexels.com/photos/33626709/pexels-photo-33626709.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    "icons": "Use 'lucide-react' for UI elements. Use 'react-icons/si' for brand logos if needed."
+  },
+  "specific_instructions": {
+    "hero_section": "Must use the 'hero_bg' with a heavy gradient overlay (black to transparent). Text MUST be huge (text-7xl md:text-9xl) using 'Anton' font. Add a floating 'Scroll Down' indicator.",
+    "stats_section": "Use 'react-countup' or similar logic for numbers. Make numbers Gold (#F2C94C).",
+    "booking_form": "Use a Modal (Dialog) for the booking form. Do not put it directly on the page to save space. Trigger it via the Main CTA.",
+    "navigation": "Sticky glassmorphism header. Logo on left (Text: TRIBAL XPERIENCE in Anton). Nav links center. 'Book Now' button right.",
+    "footer": "Massive footer. 'TRIBAL' text spanning full width. Social links in Gold."
+  },
+  "universal_guidelines": [
+    "Do not use generic gradients.",
+    "Ensure 4.5:1 contrast ratio.",
+    "Micro-interactions on every clickable element.",
+    "Mobile-first responsive design."
+  ]
+}
